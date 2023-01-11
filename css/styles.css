@@ -11,11 +11,21 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
 }
+ul {
+    margin: 0;
+    padding-left: 0;
+}
 .list {
     list-style: none;
 }
 .link {
     text-decoration: none;
+}
+.container {
+            max-width:1158px;
+            padding: 0 15px;
+            margin: 0 auto;
+            outline: solid tomato;
 }
 .visually-hidden {
     position: absolute;
@@ -37,6 +47,7 @@ body {
         letter-spacing: 0.03em;
         text-transform: uppercase;
         color: var(--accent-color);
+       
 }
 
 .logo-part {

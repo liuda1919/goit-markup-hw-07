@@ -25,8 +25,8 @@ ul {
             max-width:1158px;
             padding: 0 15px;
             margin: 0 auto;
-            outline: solid tomato;
 }
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -39,6 +39,26 @@ ul {
     clip-path: inset(50%);
     margin: -1px;
 }
+header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color:var(--title-text-color);
+}
+.header-container {
+display: flex;
+align-items: flex-end;
+}
+.header-navigation {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+.header-list {
+    display:flex;
+    gap: 40px;
+    
+}
+
 .logo-link {
     font-family: 'Raleway',sans-serif;
         font-weight: 800;
@@ -52,6 +72,7 @@ ul {
 
 .logo-part {
     color: var(--primary-text-color);
+    margin-right: 76px;
 }
 
 .header-item {
@@ -66,6 +87,9 @@ letter-spacing: 0.02em;
 .header-item:focus {
 color: var(--accent-color);
 }
+.header-contacts {
+    display: flex;
+}
 
 .header-contacts {
     font-style: normal;
@@ -76,6 +100,7 @@ color: var(--accent-color);
 }
 .header-mail {
     color: var(--primary-text-color);
+    margin-right: 40px;
 }
 .header-phone {
     color: var(--primary-text-color);
@@ -92,15 +117,23 @@ color: var(--accent-color);
 
 .hero-section {
     background-color:var(--background-title-color);
+    text-align: center;
 }
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 48px;
+    padding-top: 188px;
         font-size: 56px;
         letter-spacing: 0.02em;
         text-align: center;
         color: var(--title-text-color);
         line-height: 1.07;
+     
 }
 .hero-btn {
+    margin-bottom: 188px;
+    padding: 16px 32px;
+    border-radius: 4px;
         font-weight: 500;
         font-size: 16px;
         line-height: 1.5;

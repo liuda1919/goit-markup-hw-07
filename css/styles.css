@@ -8,6 +8,11 @@
     --secondary-text-color:#434455;
     --border-color:#E7E9FC;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
@@ -44,6 +49,7 @@ header {
     padding-top: 24px;
     padding-bottom: 24px;
     background-color:var(--title-text-color);
+    border-bottom: 1px solid var(--border-color);
 }
 .header-container {
 display: flex;
@@ -171,8 +177,8 @@ color: var(--accent-color);
         color: var(--secondary-text-color)
 }
 .second-title {
-    margin-top: 0;
-    margin-bottom: 72px;
+    margin: 0;
+    padding-bottom: 72px;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
@@ -184,7 +190,9 @@ color: var(--accent-color);
     gap: 24px;
     justify-content:center;
     margin-bottom: 120px;
+    flex-basis: calc((100% - 2*24px)/3);
 }
+    
 .team-section {
     background-color: var(--team-section-color)
 }
@@ -280,26 +288,32 @@ color: var(--accent-color);
     background-color: var(--btn-hover-color);
 }
 .portfolio-cards {
+    margin-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    justify-content: center;
 }
 .portfolio-item {
-    width: calc((100%-72)/3);
-    border: 1px solid var(--border-color);
+    flex-basis: calc((100% - 2*24px)/3);
+    border-bottom: 1px solid var(--border-color);
 }
-.picture {
-    width: calc((100%-72)/3);
-}
+
+
 .portfolio-list-title {
+    margin: 0;
+    padding-top: 32px;
+    padding-left: 16px;
     font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
 }
 .portfolio-text {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 32px;
+    padding-left: 16px;
     color: var(--secondary-text-color);
     line-height: 1.5;
         letter-spacing: 0.02em;

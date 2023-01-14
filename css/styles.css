@@ -8,18 +8,14 @@
     --secondary-text-color:#434455;
     --border-color:#E7E9FC;
 }
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--primary-text-color);
 }
-ul {
+h1,h2,h3,p,ul {
     margin: 0;
-    padding-left: 0;
+    padding: 0;
 }
 .list {
     list-style: none;
@@ -45,15 +41,11 @@ ul {
     clip-path: inset(50%);
     margin: -1px;
 }
-header {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    background-color:var(--title-text-color);
-    border-bottom: 1px solid var(--border-color);
-}
+
+
 .header-container {
 display: flex;
-align-items: flex-end;
+align-items: center;
 }
 .header-navigation {
     display: flex;
@@ -63,6 +55,8 @@ align-items: flex-end;
 .header-list {
     display:flex;
     gap: 40px;
+    padding-top: 24px;
+        padding-bottom: 24px;
     
 }
 
@@ -79,7 +73,7 @@ align-items: flex-end;
 
 .logo-part {
     color: var(--primary-text-color);
-    margin-right: 76px;
+    padding-right: 76px;
 }
 
 .header-item {
@@ -99,6 +93,7 @@ color: var(--accent-color);
 }
 
 .header-contacts {
+    gap: 40px;
     font-style: normal;
     font-size: 16px;
     line-height: 1.5;
@@ -107,7 +102,6 @@ color: var(--accent-color);
 }
 .header-mail {
     color: var(--primary-text-color);
-    margin-right: 40px;
 }
 .header-phone {
     color: var(--primary-text-color);
@@ -125,12 +119,11 @@ color: var(--accent-color);
 .hero-section {
     background-color:var(--background-title-color);
     text-align: center;
-    margin-bottom: 120px;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 .hero-title {
-    margin-top: 0;
     margin-bottom: 48px;
-    padding-top: 188px;
         font-size: 56px;
         letter-spacing: 0.02em;
         text-align: center;
@@ -139,7 +132,6 @@ color: var(--accent-color);
      
 }
 .hero-btn {
-    margin-bottom: 188px;
     padding: 16px 32px;
     border-radius: 4px;
         font-weight: 500;
@@ -159,10 +151,13 @@ color: var(--accent-color);
 .section-features {
     display: flex;
     gap: 24px;
-    margin-bottom: 120px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.section-list {
+    flex-basis: calc((100% - 3*24px)/4);
 }
 .section-title {
-    margin-top: 0;
     margin-bottom: 8px;
         font-weight: 500;
         font-size: 20px;
@@ -170,15 +165,16 @@ color: var(--accent-color);
         letter-spacing: 0.02em;
 }
 .section-text {
-    margin:0;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--secondary-text-color)
 }
+.section-two{
+    padding-bottom: 120px;
+}
 .second-title {
-    margin: 0;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
@@ -189,16 +185,15 @@ color: var(--accent-color);
     display: flex;
     gap: 24px;
     justify-content:center;
-    margin-bottom: 120px;
     flex-basis: calc((100% - 2*24px)/3);
 }
     
 .team-section {
-    background-color: var(--team-section-color)
+    background-color: var(--team-section-color);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 .team-title {
-    margin: 0;
-    padding-top: 120px;
     margin-bottom: 72px;
         font-size: 36px;
         line-height: 1.11;
@@ -208,16 +203,17 @@ color: var(--accent-color);
         line-height: 1.11;
 }
 .team-cards {
-    padding-bottom: 120px;
     display: flex;
     gap: 24px;
     border: transparent;
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
+.team-sub-section {
+padding-top: 32px;
+padding-bottom: 32px;
+}
 .team-names {
-    padding-top: 32px;
-    margin: 0;
     margin-bottom: 8px;
     font-weight: 500;
         font-size: 20px;
@@ -226,8 +222,6 @@ color: var(--accent-color);
 }
 
 .team-description {
-    padding-bottom: 32px;
-    margin: 0;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
@@ -235,6 +229,7 @@ color: var(--accent-color);
 }
 .cards {
     background-color: var(--title-text-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .footer {
     padding-top: 100px;
@@ -254,17 +249,21 @@ color: var(--accent-color);
     color: var(--title-text-color);
 }
 .footer-text {
-    margin: 0;
     margin-top: 16px;
-    max-width: 264px;
+    width: 264px;
     color: var(--title-text-color);
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
+.header-portfolio {
+    border-bottom: 1px solid var(--border-color);
+}
+.btn-section {
+    padding-top: 96px;
+    padding-bottom: 72px;
+}
 .portfolio-btn-list {
-    margin-top: 96px;
-    margin-bottom: 72px;
     display: flex;
     justify-content: center;
     gap: 24px;
@@ -274,7 +273,7 @@ color: var(--accent-color);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     color: var(--accent-color);
-    background-color: var(--title-text-color);
+    background-color: var(--team-section-color);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -287,8 +286,10 @@ color: var(--accent-color);
     color:var(--title-text-color);
     background-color: var(--btn-hover-color);
 }
+.portfolio-section {
+padding-bottom: 120px;
+}
 .portfolio-cards {
-    margin-bottom: 120px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -296,24 +297,22 @@ color: var(--accent-color);
 }
 .portfolio-item {
     flex-basis: calc((100% - 2*24px)/3);
-    border-bottom: 1px solid var(--border-color);
+}
+.portfolio-sublist {
+border-bottom: 1px solid var(--border-color);
+padding-top: 32px;
+padding-bottom: 32px;
+padding-left: 16px;
 }
 
-
 .portfolio-list-title {
-    margin: 0;
-    padding-top: 32px;
-    padding-left: 16px;
+    padding-bottom: 8px;
     font-weight: 500;
         font-size: 20px;
         line-height: 1.2;
         letter-spacing: 0.02em;
 }
 .portfolio-text {
-    margin: 0;
-    padding-top: 8px;
-    padding-bottom: 32px;
-    padding-left: 16px;
     color: var(--secondary-text-color);
     line-height: 1.5;
         letter-spacing: 0.02em;

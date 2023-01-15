@@ -28,7 +28,10 @@ h1,h2,h3,p,ul {
             padding: 0 15px;
             margin: 0 auto;
 }
-
+.header {
+    padding-top: 24px;
+        padding-bottom: 24px;
+}
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -55,8 +58,6 @@ align-items: center;
 .header-list {
     display:flex;
     gap: 40px;
-    padding-top: 24px;
-        padding-bottom: 24px;
     
 }
 
@@ -121,15 +122,16 @@ color: var(--accent-color);
     text-align: center;
     padding-top: 188px;
     padding-bottom: 188px;
+    display: flex;
 }
 .hero-title {
     margin-bottom: 48px;
+    max-width: 500px;
         font-size: 56px;
         letter-spacing: 0.02em;
-        text-align: center;
         color: var(--title-text-color);
         line-height: 1.07;
-     
+justify-content: center;
 }
 .hero-btn {
     padding: 16px 32px;
@@ -148,11 +150,14 @@ color: var(--accent-color);
 .hero-btn:focus {
     background-color: var(--btn-hover-color);
 }
+.strategy-section {
+padding-top: 120px;
+    padding-bottom: 120px;
+}
 .section-features {
     display: flex;
     gap: 24px;
-    padding-top: 120px;
-    padding-bottom: 120px;
+
 }
 .section-list {
     flex-basis: calc((100% - 3*24px)/4);
@@ -170,10 +175,10 @@ color: var(--accent-color);
         letter-spacing: 0.02em;
         color: var(--secondary-text-color)
 }
-.section-two{
+.section-doing{
     padding-bottom: 120px;
 }
-.second-title {
+.doing-title {
     margin-bottom: 72px;
         font-size: 36px;
         line-height: 1.11;
@@ -181,7 +186,7 @@ color: var(--accent-color);
         text-transform: capitalize;
         text-align: center;
 }
-.second-section {
+.doing-section {
     display: flex;
     gap: 24px;
     justify-content:center;
@@ -242,7 +247,8 @@ padding-bottom: 32px;
         font-weight: 800;
         font-size: 18px;
         letter-spacing: 0.03em;;
-        line-height: 1.16
+        line-height: 1.16;
+        text-transform: uppercase;
     }
 
 .footer-logo-part {
@@ -258,15 +264,19 @@ padding-bottom: 32px;
 }
 .header-portfolio {
     border-bottom: 1px solid var(--border-color);
+    padding-top: 24px;
+        padding-bottom: 24px;
 }
-.btn-section {
-    padding-top: 96px;
-    padding-bottom: 72px;
+.portfolio-section {
+padding-top: 96px;
+padding-bottom: 120px;
 }
+
 .portfolio-btn-list {
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin-bottom: 72px;
 }
 .portfolio-btn {
     padding:12px 24px;
@@ -286,9 +296,7 @@ padding-bottom: 32px;
     color:var(--title-text-color);
     background-color: var(--btn-hover-color);
 }
-.portfolio-section {
-padding-bottom: 120px;
-}
+
 .portfolio-cards {
     display: flex;
     flex-wrap: wrap;
@@ -299,7 +307,8 @@ padding-bottom: 120px;
     flex-basis: calc((100% - 2*24px)/3);
 }
 .portfolio-sublist {
-border-bottom: 1px solid var(--border-color);
+border: 1px solid var(--border-color);
+border-top: 0;
 padding-top: 32px;
 padding-bottom: 32px;
 padding-left: 16px;

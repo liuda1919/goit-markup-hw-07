@@ -129,7 +129,6 @@ color: var(--accent-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url(../images/hero-bg.jpg);
     background-repeat:no-repeat;
     max-width: 1440px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -167,38 +166,30 @@ justify-content: center;
 .hero-btn:focus {
     background-color: var(--btn-hover-color);
 }
-.advantages-icons-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 8px;
-}
-
-.icon-item {
-    width: 264px;
-        height: 112px;
-}
-
-.icons-link {
-    height: 100%;
-    background-color: var(--team-section-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-}
 .strategy-section {
-padding-top: 120px;
+    padding-top: 120px;
     padding-bottom: 120px;
 }
 .section-features {
     display: flex;
     gap: 24px;
-
 }
 .section-list {
     flex-basis: calc((100% - 3*24px)/4);
+    width: 264px;
+    border-radius: 4px;
 }
+
+.icon-sub {
+    height:112px;
+    background-color: var(--team-section-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
 .section-title {
     margin-bottom: 8px;
         font-weight: 500;
@@ -455,7 +446,6 @@ padding-bottom: 120px;
 display: block;
 }
 .portfolio-link:hover{
-    border: 0.5px solid var(--team-section-color);
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-sublist {

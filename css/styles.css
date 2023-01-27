@@ -10,6 +10,7 @@
     --customers-border:#8E8F99;
     --footer-icon-color:rgba(255, 255, 255, 0.1);
     --footer-hover:#31D0AA;
+    --modal-color:#FCFCFC;
 }
 
 body {
@@ -90,11 +91,26 @@ color: var(--primary-text-color);
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
+transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:hover,
 .header-item:focus {
 color: var(--accent-color);
+}
+.current {
+    color: var(--accent-color);
+    position: relative;
+}
+.current::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0px;
+    top:42px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
 }
 .header-contacts {
     display: flex;
@@ -110,9 +126,11 @@ color: var(--accent-color);
 }
 .header-mail {
     color: var(--primary-text-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-phone {
     color: var(--primary-text-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-mail:hover,
 .header-mail:focus {
@@ -161,6 +179,7 @@ justify-content: center;
     color: var(--title-text-color);
     background-color: var(--accent-color);
     font-family:'Roboto',sans-serif ;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -285,6 +304,7 @@ padding: 32px 16px 32px 16px;
     border-radius: 50%;
 align-items: center;
 justify-content: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cards-soc-link:is(:hover,:focus){
     background-color:var(--btn-hover-color);
@@ -321,6 +341,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: var(--customers-border);
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-icon {
     fill:currentColor;
@@ -380,6 +401,7 @@ color: var(--customers-border);
         border-radius: 50%;
         align-items: center;
         justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:is(:hover, :focus) {
     background-color: var(--footer-hover);
@@ -423,6 +445,7 @@ padding-bottom: 120px;
         line-height: 1.5;
         letter-spacing: 0.04em;
         cursor: pointer;
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -440,6 +463,28 @@ padding-bottom: 120px;
 }
 .portfolio-item {
     flex-basis: calc((100% - 2*24px)/3);
+}
+.portfolio-item:is(:hover,:focus) .portfolio-top-text {
+    transform: translateY(0);
+}
+.portfolio-top-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-top-text {
+    position: absolute;
+    top:0;
+    padding:32px 40px 164px 32px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--team-section-color);
+    background-color: var(--accent-color);
+    background-image: linear-gradient(0deg, rgba(77, 90, 229, 0.1), rgba(77, 90, 229, 0.1)),
+        url(4);
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link {
     color: var(--primary-text-color);
@@ -467,4 +512,39 @@ padding-left: 16px;
     color: var(--secondary-text-color);
     line-height: 1.5;
         letter-spacing: 0.02em;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    min-height: 576px;
+    background-color:var(--modal-color);
+    border-radius: 4px;
+    padding: 24px;
+}
+
+.modal-close {
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--border-color);
+    display: block;
+    margin-left: auto;
 }

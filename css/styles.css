@@ -91,7 +91,7 @@ color: var(--primary-text-color);
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-item:hover,
@@ -126,11 +126,11 @@ color: var(--accent-color);
 }
 .header-mail {
     color: var(--primary-text-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-phone {
     color: var(--primary-text-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-mail:hover,
 .header-mail:focus {
@@ -179,7 +179,7 @@ justify-content: center;
     color: var(--title-text-color);
     background-color: var(--accent-color);
     font-family:'Roboto',sans-serif ;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -445,7 +445,7 @@ padding-bottom: 120px;
         line-height: 1.5;
         letter-spacing: 0.04em;
         cursor: pointer;
-        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-btn:hover,
 .portfolio-btn:focus {
@@ -489,6 +489,7 @@ padding-bottom: 120px;
 .portfolio-link {
     color: var(--primary-text-color);
 display: block;
+transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover{
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);

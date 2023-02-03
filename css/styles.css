@@ -11,6 +11,7 @@
     --footer-icon-color:rgba(255, 255, 255, 0.1);
     --footer-hover:#31D0AA;
     --modal-color:#FCFCFC;
+    --policy-color:#757575;
 }
 
 body {
@@ -179,7 +180,7 @@ justify-content: center;
     color: var(--title-text-color);
     background-color: var(--accent-color);
     font-family:'Roboto',sans-serif ;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -379,15 +380,19 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 }
 .footer-section {
     display: flex;
-    gap: 120px;
     align-items: baseline;
+}
+.footer-part {
+    margin-right: 120px;
 }
 .footer-soc {
     display: flex;
         justify-content: center;
         gap: 24px;
 }
-
+.footer-part-two{
+    margin-right: 80px;
+}
 .footer-soc-item {
     width: 40px;
         height: 40px;
@@ -409,6 +414,53 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 .footer-soc-icon {
     width: 24px;
     height: 24px;
+}
+.subscribe-form {
+    display: flex;
+}
+.subscribe-input {
+    outline: none;
+    width: 264px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: transparent;
+        padding-left: 16px;
+        margin-right: 24px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-input:is(:hover,:focus) {
+    border-color: var(--customers-border);
+}
+.subscribe-input::placeholder {
+    font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.6);
+            padding-top: 8px;
+            padding-bottom: 8px;
+}
+.subscribe-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 64px 8px 24px;
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        color: var(--team-section-color);
+        background-color: var(--accent-color);
+        display: flex;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-btn:is(:hover,:focus) {
+    background-color: var(--btn-hover-color);
+}
+.subscribe-icon {
+    margin-left: 16px;
+   fill: var(--title-text-color);
 }
 .part-text {
     margin-bottom: 16px;
@@ -550,15 +602,133 @@ padding-left: 16px;
     display: block;
     margin-left: auto;
     justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0;
+        margin-bottom: 24px;
+}
+.modal-cross {
+display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.modal-title {
+    font-weight: 500;
+        font-size: 16px;
+        line-height:1.5;
+        letter-spacing: 0.02em;
+        text-align: center;
+        margin-bottom: 14px;
+}
+.modal-field {
+margin-bottom: 8px;
+}
+.input-wrap {
+    position: relative;
+}
+.modal-input {
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        padding-left: 38px;
+        margin-top: 4px;
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus{
+    border-color: var(--accent-color);
+}
+.modal-input-icon {
+    position: absolute;
+    left: 19px;
+top: 50%;
+transform: translateY(-50%);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .modal-input-icon {
+    fill:var(--accent-color);
+}
+.modal-input-name {
+        font-size: 12px;
+        line-height: 1.33;
+        letter-spacing: 0.04em;
+        color:var(--customers-border);
+}
+.modal-input-text {
+   
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: var(--customers-border);
+}
+.modal-comment {
+    width: 100%;
+        height: 120px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+            font-size: 12px;
+            line-height: 1.33;
+            letter-spacing: 0.04em;
+            color: var(--customers-border);
+            padding-left: 16px;
+            padding-top: 8px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+            resize: none;
+            outline: none;
+}
+.modal-comment:focus{
+    border-color:var(--accent-color);
+}
+.modal-btn{
+    display: flex;
+    margin-left: auto;
+        margin-right: auto;
+padding: 16px 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    border: none;
+    color: var(--title-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:is(:hover,:focus){
+    background-color: var(--btn-hover-color);
 }
 .modal-link {
-    width: 100%;
-        height: 100%;
+    color: var(--accent-color);
+}
+.check-text {
+        font-size: 12px;
+        line-height:1.33;
+        letter-spacing: 0.04em;
+        color:var(--policy-color);
         display: flex;
-        align-items: center;
-            justify-content: center;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 0;
 }
 
+.check-text span {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid var(--background-title-color);
+    border-radius: 2px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+fill: transparent;
+}
 
+.modal-check:checked + .check-text span {
+    background-color: var(--btn-hover-color);
+    border-color: var(--btn-hover-color);
+    fill: var(--team-section-color);
+}

@@ -388,7 +388,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 .footer-soc {
     display: flex;
         justify-content: center;
-        gap: 24px;
+        gap: 16px;
 }
 .footer-part-two{
     margin-right: 80px;
@@ -444,7 +444,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 .subscribe-btn {
     border: none;
     border-radius: 4px;
-    padding: 10px 64px 8px 24px;
+    padding: 8px 24px;
     font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
@@ -452,6 +452,7 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
         color: var(--team-section-color);
         background-color: var(--accent-color);
         display: flex;
+        align-items: center;
         cursor: pointer;
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -589,10 +590,13 @@ padding-left: 16px;
     min-height: 576px;
     background-color:var(--modal-color);
     border-radius: 4px;
-    padding: 24px;
+    padding: 72px 24px 24px;
 }
 
 .modal-close {
+    position: absolute;
+    right: 24px;
+    top: 24px;
     width: 24px;
     height: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -600,12 +604,8 @@ padding-left: 16px;
     color: var(--primary-text-color);
     background-color: var(--border-color);
     display: block;
-    margin-left: auto;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 0;
-        margin-bottom: 24px;
 }
 .modal-cross {
 display: flex;
@@ -683,10 +683,12 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-color:var(--accent-color);
 }
 .modal-btn{
+    min-width: 169px;
+    justify-content: center;
     display: flex;
     margin-left: auto;
         margin-right: auto;
-padding: 16px 32px;
+        padding: 16px 32px;
     border-radius: 4px;
     font-weight: 500;
     font-size: 16px;

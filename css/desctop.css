@@ -1,0 +1,76 @@
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+        .hero-section {
+            max-width: 1440px;
+            padding-top: 188px;
+                padding-bottom: 188px;
+        }
+
+.hero-title {
+    margin-bottom: 48px;
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 500px;
+}
+    .section-list {
+        flex-basis: calc((100% - 3*24px) / 4);
+    }
+
+    .icon-sub {
+        display: flex;
+    }
+
+    .section-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .section-text {
+        font-weight: 400;
+    }
+
+    .section-doing {
+        display: block;
+    }
+        .container-mini {
+            max-width: 1200px;
+            margin: 0;}
+        .team-section {
+            padding: 120px 156px;
+        }
+.cards {
+    width: calc((100% - 72px) / 4);
+}
+    .customers {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .customers-list {
+        gap: 24px;
+    }
+
+    .customers-item {
+        width: calc((100% - 120px) / 6);
+
+    }
+.team-cards {
+    gap: 24px;
+}
+.footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 156px;
+}
+.footer-section {
+    display: flex;
+    align-items: baseline;
+}
+
+
+
+}

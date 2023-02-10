@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+.hero-section {
+    padding-top: 112px;
+    padding-bottom: 108px;
+}
+
+.hero-title {
+    margin-bottom: 40px;
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+}
+    .section-features {
+        gap: 24px;
+    }
+
+    .section-list {
+        flex-basis: calc((100% - 24px) / 2);
+
+    }
+    .cards {
+        width: calc((100% - 24px) / 2);
+    }
+.container-mini{
+    max-width: 584px;
+    margin: 0;
+}
+.team-cards {
+    row-gap: 64px;
+        column-gap: 24px;
+}
+
+    .customers-list {
+        gap: 24px;
+    }
+
+    .customers-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+}

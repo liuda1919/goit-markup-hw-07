@@ -26,6 +26,7 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    width: 100%;
 }
 .list {
     list-style: none;
@@ -34,8 +35,7 @@ img {
     text-decoration: none;
 }
 .container {
-            max-width:1158px;
-            padding: 0 15px;
+            padding: 0;
             margin: 0 auto;
 }
 .header {
@@ -147,25 +147,24 @@ color: var(--accent-color);
     background-color:var(--background-title-color);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url(../images/hero-bg.jpg);
     background-repeat:no-repeat;
-    max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
     text-align: center;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 112px;
+    padding-bottom: 112px;
     display: flex;
 }
 
 .hero-title {
-    margin-bottom: 48px;
-    max-width: 500px;
-        font-size: 56px;
+    margin-bottom: 72px;
+    max-width: 320px;
+        font-size: 36px;
         letter-spacing: 0.02em;
         color: var(--title-text-color);
-        line-height: 1.07;
+        line-height: 1.11;
 justify-content: center;
 }
 .hero-btn {
@@ -187,23 +186,24 @@ justify-content: center;
     background-color: var(--btn-hover-color);
 }
 .strategy-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+   padding:96px 16px;
 }
 .section-features {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px;
 }
 .section-list {
-    flex-basis: calc((100% - 3*24px)/4);
-    width: 264px;
+    /* flex-basis: calc((100% - 3*24px)/4); */
+    width: 100%;
     border-radius: 4px;
 }
 
 .icon-sub {
+    display: none;
     height:112px;
     background-color: var(--team-section-color);
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
     border-radius: 4px;
@@ -212,12 +212,14 @@ justify-content: center;
 
 .section-title {
     margin-bottom: 8px;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 1.2;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
         letter-spacing: 0.02em;
+        text-align: center;
 }
 .section-text {
+    font-weight: 500;
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
@@ -225,6 +227,7 @@ justify-content: center;
 }
 .section-doing{
     padding-bottom: 120px;
+    display: none;
 }
 .doing-title {
     margin-bottom: 72px;
@@ -243,8 +246,7 @@ justify-content: center;
     
 .team-section {
     background-color: var(--team-section-color);
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 96px 82px 128px 82px;
 }
 .team-title {
     margin-bottom: 72px;
@@ -262,7 +264,8 @@ justify-content: center;
 }
 .team-cards {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    row-gap: 72px;
     border: transparent;
     border-radius: 0px 0px 4px 4px;
     text-align: center;
@@ -311,8 +314,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-color:var(--btn-hover-color);
 }
 .customers {
-    padding-top: 130px;
-    padding-bottom: 120px;
+    padding: 96px 16px;
 }
 .customers-title {
     margin-bottom: 72px;
@@ -325,11 +327,13 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .customers-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+    row-gap: 72px;
 }
 
 .customers-item {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 16px) / 2);
         height: 88px;
 }
 
@@ -353,8 +357,9 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 }
 
 .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+   
+   text-align: center;
+    padding-top: 96px;
     background-color: var(--background-title-color);
 }
 .footer-logo {
@@ -372,20 +377,22 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-b
 }
 .footer-text {
     margin-top: 16px;
+    margin-bottom: 72px;
     width: 264px;
     color: var(--title-text-color);
         font-size: 16px;
         line-height: 1.5;
         letter-spacing: 0.02em;
 }
-.footer-section {
+/* .footer-section {
     display: flex;
     align-items: baseline;
-}
+} */
 .footer-part {
     margin-right: 120px;
 }
 .footer-soc {
+    margin-top: 16px;
     display: flex;
         justify-content: center;
         gap: 16px;
@@ -734,3 +741,5 @@ fill: transparent;
     border-color: var(--btn-hover-color);
     fill: var(--team-section-color);
 }
+
+

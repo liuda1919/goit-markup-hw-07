@@ -2,6 +2,7 @@
     .container {
         max-width: 1200px;
     }
+        
         .hero-section {
             max-width: 1440px;
             padding-top: 188px;
@@ -61,16 +62,22 @@
 .team-cards {
     gap: 24px;
 }
-.footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 156px;
-}
+
 .footer-section {
     display: flex;
+    flex-wrap: nowrap;
     align-items: baseline;
+   padding:100px 159px 100px 156px;
 }
-
-
+.footer-part {
+    margin-right: 120px;
+}
+.footer-subscribe {
+    padding-bottom: 0;
+}
+.footer-part-two {
+    margin-bottom: 0;
+    margin-right: 80px;
+}
 
 }

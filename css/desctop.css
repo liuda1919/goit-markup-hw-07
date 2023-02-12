@@ -2,6 +2,16 @@
     .container {
         max-width: 1200px;
     }
+        .header {
+           
+            padding-bottom: 28px;
+        }
+        .header-contacts {
+            display: flex;
+        gap: 40px;}
+                .current::after {
+                    top: 46px;
+                }
         
         .hero-section {
             max-width: 1440px;

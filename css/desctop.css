@@ -69,7 +69,11 @@
         width: calc((100% - 120px) / 6);
 
     }
+           .container-mini {
+           max-width: none;
+           }
 .team-cards {
+    flex-basis: calc((100%-3*24px));
     gap: 24px;
 }
 

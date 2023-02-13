@@ -1,6 +1,6 @@
 @media screen and (min-width: 480px) {
     .container {
-        max-width: 428px;
+        width: 428px;
     }
         .hero-section {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tablet-bg.jpg);
@@ -12,4 +12,4 @@
                         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-2x-tablet\ \(1\).jpg);
                     }
                 }
-}
+            }

@@ -1,6 +1,6 @@
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 720px;
+        width: 720px;
     }
 .menu-open-btn {
     display: none;
@@ -104,8 +104,8 @@ margin-bottom: 4px;
         width: calc((100% - 24px) / 2);
     }
 .container-mini{
-    max-width: 584px;
-    margin: 0;
+    width: 584px;
+    margin: 0 auto;
 }
 .team-cards {
     row-gap: 64px;
@@ -123,34 +123,37 @@ margin-bottom: 4px;
             display: flex;
             align-items: baseline;
         }
+
       .footer {
-        margin: 0;;
-      }  
+        padding:96px 0 96px 108px;
+        margin: 0;
+      }
 .footer-section {
-    margin: 0;
-    padding:96px 0 96px 108px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
 }
+.footer-text {
+    margin-bottom: 0;
+}
 .footer-part {
+    margin: 0;
     padding: 0;
     margin-right: 24px;
     margin-bottom: 72px;
     text-align: left;
 }
 .subscribe-form {
-    width: 264px;
+    max-width: 453px;
     padding-left:0;
-    margin-left: 0;;
+    margin-left: 0;
+    display: flex;
 }
 .subscribe-txt {
     margin-bottom: 16px;
     text-align: left;
 }
-.subscribe-form {
-    display: flex;
-}
+
 .subscribe-input {
     width: 264px;
     margin-right: 24px;
